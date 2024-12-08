@@ -1,0 +1,41 @@
+{{define "location"}}
+<div class="location-detail">
+    <div class="location-header">
+        <h2>{{FormatLocation .Data.Location}}</h2>
+        <p class="location-stats">{{len .Data.Artists}} Artists · {{len .Data.Dates}} Concert Dates</p>
+    </div>
+    
+    <div class="artists-section">
+        <h3>Artists performing in this location</h3>
+        <div class="artist-grid">
+            {{range .Data.Artists}}
+            <a href="/artist/{{.ID}}" class="artist-card">
+                <img src="{{.Image}}" alt="{{.Name}}" loading="lazy">
+                <div class="card-content">
+                    <h2>{{.Name}}</h2>
+                    <p class="creation-date">Since {{.CreationDate}}</p>
+                    <p class="first-album">First Album: {{.FirstAlbum}}</p>
+                </div>
+            </a>
+            {{end}}
+        </div>
+    </div>
+
+    <div class="dates-section">
+        <h3>Concert Schedule</h3>
+        <div class="schedule-container">
+            {{range .Data.Dates}}
+            <div class="schedule-item">
+                <div class="schedule-date">{{.}}</div>
+                <div class="schedule-artist">
+                    <a href="/artist/{{(index $.Data.DatesLocations .).ID}}" class="artist-link">
+                        <img src="{{(index $.Data.DatesLocations .).Image}}" alt="{{(index $.Data.DatesLocations .).Name}}">
+                        <span>{{(index $.Data.DatesLocations .).Name}}</span>
+                    </a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
+{{end}}

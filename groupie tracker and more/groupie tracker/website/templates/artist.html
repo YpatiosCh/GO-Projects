@@ -1,0 +1,48 @@
+{{define "artist"}}
+<div class="artist-detail">
+    {{with (index .Data.Artists 0)}}
+    <div class="artist-info">
+        <div class="left-column">
+            <img src="{{.Image}}" alt="{{.Name}}">
+            <div class="band-info">
+                <div class="detail-item">
+                    <span class="label">First Album:</span>
+                    <span class="value">{{.FirstAlbum}}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Creation Date:</span>
+                    <span class="value">{{.CreationDate}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="info-content">
+            <h2>{{.Name}}</h2>
+            <div class="info-section">
+                <h3>Members</h3>
+                <div class="members-list">
+                    {{range .Members}}
+                    <p>{{.}}</p>
+                    {{end}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{end}}
+    
+    <div class="concert-section">
+        <h3>Event History</h3>
+        <div class="concert-grid">
+            {{range $location, $dates := .Data.Relations}}
+            <div class="concert-card">
+                <h4>{{FormatLocation $location}}</h4>
+                <ul class="dates-list">
+                    {{range $dates}}
+                    <li>{{.}}</li>
+                    {{end}}
+                </ul>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
+{{end}}

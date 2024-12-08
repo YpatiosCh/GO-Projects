@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: monospace;
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: auto; /* Add scrollbar to window instead of components */
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    min-height: 800px; /* Set a minimum height */
+    padding: 20px;
+    margin: 40px auto; /* Center the container and add some margin */
+    gap: 20px; /* Add space between form and ASCII art */
+}
+
+.form-container {
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00ff00;
+    height: fit-content; /* Adjust height to content */
+}
+
+.ascii-background {
+    width: 45%;
+    background-color: black;
+    color: #00ff00;
+    white-space: pre;
+    font-size: 12px; /* Fixed font size */
+    line-height: 1.2;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00ff00;
+    font-family: monospace;
+    height: fit-content; /* Adjust height to content */
+    min-width: 600px; /* Minimum width to prevent content deformation */
+}
+
+label, input, button {
+    display: inline-block;
+    margin: 10px 0;
+    color: #00ff00;
+}
+
+/* Larger text area with bold white text */
+textarea {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #00ff00;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #00ff00;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #009900;
+}
+
+.radio-group {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.radio-group label {
+    margin-right: 10px;
+}
+
+pre {
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: #111;
+    padding: 20px;
+    color: #00ff00;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

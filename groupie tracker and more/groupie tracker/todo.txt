@@ -1,0 +1,9 @@
+1. Add location to date.html - done
+
+2. Format locations - done 
+
+3. Add unit tests
+
+4. Add dockerfile and dockerignore file
+
+5. Clean up unneeded css attributes - done (will not separate css files as some templates use the same attributes, will discuss it if its needed)

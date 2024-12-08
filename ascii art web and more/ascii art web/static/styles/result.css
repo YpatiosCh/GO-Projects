@@ -1,0 +1,108 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: monospace;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.form-container {
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00ff00;
+}
+
+.ascii-background {
+    width: 45%;
+    background-color: black;
+    color: #00ff00;
+    white-space: pre; /* Maintain all the spacing from the ASCII art */
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00ff00;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    font-family: monospace;
+    max-height: 80vh; /* Prevents the container from getting too tall */
+    display: block;
+}
+
+label, input, button {
+    display: inline-block;
+    margin: 10px 0;
+    color: #00ff00;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #00ff00;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #00ff00;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #009900;
+}
+
+pre {
+    font-family: monospace;
+    white-space: pre; /* Ensures we respect all line breaks and spaces in the ASCII art */
+    background-color: #111;
+    padding: 20px;
+    color: #00ff00;
+    border-radius: 5px;
+    margin-top: 20px;
+    word-wrap: normal; /* Prevent text from breaking into multiple lines */
+    overflow-x: auto; /* Enable horizontal scroll if necessary */
+    overflow-y: auto; /* Enable vertical scroll if necessary */
+    max-width: 100%;    /* Ensure the content doesn't overflow beyond the screen width */
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.return-link {
+    align-self: flex-start; /* Positions the link at the top-left */
+    margin-bottom: 20px;
+}
